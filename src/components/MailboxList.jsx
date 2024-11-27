@@ -11,11 +11,12 @@ const MailboxList = ({mailboxes}) => {
             {mailboxes.map((mailbox) => (
                 
                 <Link
-                 to="/mailboxes/:mailboxId"
+                 to={`/mailboxes/${mailbox._id}`}
                  key={mailbox._id}
                 >
                 <h3>Boxholder: {mailbox.boxholder}</h3>
                 <p>Box Size: {mailbox.boxSize}</p>
+                <h3>{mailbox._id}</h3>
                 </Link>
             ))}
          </div>
